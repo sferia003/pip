@@ -1,6 +1,5 @@
-# A Ray Casting Algorithim Implemented In Java
+# PIP (Point In Polygon)
 
 ## A Quick Explanation 
 
-
-\(\epsilon\)
+In order to determine if a point lies inside of a simple polygon (one that does not have intersections with itself), a raycasting algorithim is used. A straight line from the point is drawn in any direction, and the number of intersections with the perimeter determines the state (either inside or outside the shape). It is first assumed that it is outside, and than the line is drawn until infinity; The default is that it hits nothing, and it is definitely outside the polygon (assumes false first, which is why it would be first assumed it is outside the polygon). Every intersection changes the state of the boolean (either false -> true || true -> false by using !), so an even number of intersections means that it stays outside (as it was outside at first). The only issue with the algorithim is that the point can not be directly on the edge, so a numerical tolerence is added such that the algorithim shifts the point if it is close enough to the edge.
