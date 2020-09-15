@@ -49,7 +49,7 @@ public class GUI extends JFrame {
         g.drawLine(250, 500, 250, 0);
         g.drawLine(0, 250, 500, 250);
         
-        Point p = new Point(2,2); // generates a new point
+        Point p = new Point(); // generates a random new point
 
         g.setColor(Color.BLUE); // sets the polygon's color to blue
         Point[] polyPoints = new Point[7]; // constructs the structure for the polygon by placing specific points into an array 
